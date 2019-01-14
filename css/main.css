@@ -1,0 +1,30 @@
+.h1-inicio {
+    background-color: aqua;
+    font-size: 40px;
+    font-family: cursive !important;
+}
+
+.div-inicio {
+    width: 50%;
+    margin-top: 60px !important;
+    text-align: left;
+}
+
+.div-inicio2 {
+    width: 50%;
+    margin-top: 60px !important;
+    text-align: right;
+}
+
+.row {
+    width: 100%;
+}
+
+.div-left {
+    text-align: right;
+}
+
+
+/* .body-inicio {
+
+} */
