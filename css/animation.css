@@ -1,0 +1,33 @@
+
+
+
+
+
+
+#animationHtml {
+    width: 100px;
+    height: 100px;
+    border: 10px;
+    -webkit-animation: ani 5s infinite;
+    animation: ani 5s infinite;
+}
+
+@-webkit-keyframes ani {
+    from {
+        background-color: yellow;
+    }
+
+    to {
+        background-color: black
+    }
+}
+
+@keyframes ani {
+    from {
+        background-color: yellow;
+    }
+
+    to {
+        background-color: black
+    }
+}
