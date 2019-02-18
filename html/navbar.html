@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            margin: 0;
+        }
+        .oculto{
+            display: none;
+        }
+
+        .imagen{
+            width: 100%; 
+            height: 100%;
+        }
+
+        ul.sidenav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        ul.sidenav li a {
+            display: block;
+            color: #000000;
+            padding: 8px 16px;
+        }
+
+        ul.sidenav li a.active{
+            background-color: #4CAF50;
+            color: white;
+
+        }
+
+        ul.sidenav li a.notactive{
+            display: block;
+            color: #000000;
+            padding: 8px 16px;
+
+        }
+
+        ul.sidenav li a:hover:not(.active){
+            background-color: #555555;
+            color: white;
+        }
+
+        div.content {
+            margin-left: 25%;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        @media screen and (max-width: 1366px){
+            ul.sidenav {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        ul.sidenav li a {
+            float: left;
+            padding: 15px;
+        }
+
+        div.content {
+            margin-left: 0;
+        }
+/* 
+        .imagen{
+            float: left;
+            width: 360px; 
+            height: 360px;
+        } */
+
+        }
+
+        @media screen and (max-width: 450px) {
+            ul.sidenav li a {
+                text-align: center;
+                float: none;
+        }
+
+        .imagen{
+            float: left;
+            /* width: 360px;  */
+            height: 360px;
+        }
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+<ul class="sidenav">
+    <li> <a id="menu1" href="javascript:;" click="menu1()"> Menu 1 </a> </li>
+    <li> <a id="menu2" href="javascript:;" > Menu 2</a> </li>
+    <li> <a id="menu3" href="javascript:;" > Menu 3</a> </li>
+</ul> 
+
+<div id="contenido1" class="content oculto">
+    <p>Hola mundo 1</p>
+    <img class="imagen" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Internet2.jpg" style="" alt="">
+</div>
+
+<div id="contenido2" class="content oculto">
+    <p>Hola mundo 2</p>
+</div>
+
+<div id="contenido3" class="content oculto">
+    <p>Hola mundo 3</p>
+</div>
+
+</body>
+
+<script>
+
+$(document).ready(function(){
+  $("#menu1").click(function(){
+    $("#menu1").addClass("active");
+    $("#menu2").removeClass("active")
+    $("#menu3").removeClass("active")
+    $("#contenido1").removeClass("oculto")
+    $("#contenido2").addClass("oculto")
+    $("#contenido3").addClass("oculto")
+  });
+  $("#menu2").click(function(){
+    $("#menu1").removeClass("active")
+    $("#menu2").addClass("active");
+    $("#menu3").removeClass("active");
+    $("#contenido2").removeClass("oculto")
+    $("#contenido1").addClass("oculto")
+    $("#contenido3").addClass("oculto")
+  });
+  $("#menu3").click(function(){
+    $("#menu1").removeClass("active")
+    $("#menu2").removeClass("active");
+    $("#menu3").addClass("active");
+    $("#contenido3").removeClass("oculto")
+    $("#contenido1").addClass("oculto")
+    $("#contenido2").addClass("oculto")
+  });
+});
+
+</script>
+
+</html>

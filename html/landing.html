@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="header_landing">
+
+    </div>
+
+    <div class="container_landing">
+        <!-- <form action="" method="POST"> -->
+        <input type="text" id="nombre">
+        <br>
+        <input type="password" id="password">
+        <br>
+        <input id="email">
+        <br>
+
+        <button onclick="call_nombre()">Aceptar</button>
+        <!-- </form> -->
+        <!-- <button onclick="call_nombre();"> Aceptar</button> -->
+
+    </div>
+
+    <div class="footer_landing">
+
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="">
+    var nombre;
+    document.getElementById('nombre').required = true;
+     
+    function call_nombre() {
+        nombre = document.getElementById('nombre').value;
+        password = document.getElementById('password').value;
+        email = document.getElementById('email').value;
+        if(nombre.length == 0 || password.length == 0 || email.length == 0){
+            
+        }
+        else{
+            alert(nombre+"-"+password+"-"+email)
+        }
+    }
+</script>
+
+</html>
